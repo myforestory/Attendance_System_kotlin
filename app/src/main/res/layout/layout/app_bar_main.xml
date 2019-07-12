@@ -39,7 +39,7 @@
                     android:paddingRight="@dimen/dp_100"
                     android:text=""
                     android:clickable="true"
-
+                    android:onClick="titleONClick"
                     android:textColor="@color/colorMainWhite"
                     android:textSize="@dimen/dp_20" />
 
@@ -68,7 +68,7 @@
                     android:paddingRight="@dimen/dp_100"
                     android:text=""
                     android:clickable="true"
-
+                    android:onClick="titleONClick"
                     android:textColor="@color/colorMainWhite"
                     android:textSize="@dimen/dp_14" />
 
@@ -79,8 +79,6 @@
     </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/content_main" />
-
-    <!--android:onClick="titleONClick"-->
 
     <!--<android.support.design.widget.FloatingActionButton-->
         <!--android:id="@+id/fab"-->

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateActivity"
+    tools:showIn="@layout/app_bar_update">
+
+    <EditText
+        android:id="@+id/etStrTime_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/dp_80"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/update_hint_etStrTime"
+        android:focusable="false"
+        android:drawableStart="@mipmap/ic_play"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/etEndTime_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etStrTime_update"
+        android:layout_marginTop="@dimen/dp_24"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/update_hint_etStrTime"
+        android:focusable="false"
+        android:drawableStart="@mipmap/ic_power_setting"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/etDescription_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etEndTime_update"
+        android:layout_marginTop="100dp"
+        android:textSize="@dimen/dp_12"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:hint="@string/update_hint_etDescription_update"
+        android:text="" />
+
+</RelativeLayout>

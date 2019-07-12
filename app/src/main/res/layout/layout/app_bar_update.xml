@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar_main"
+            android:id="@+id/toolbar_update"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
@@ -31,46 +31,36 @@
                 android:scaleType="centerCrop">
 
 
+
                 <TextView
-                    android:id="@+id/txTitleDate"
+                    android:id="@+id/tvUpdateTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:paddingRight="@dimen/dp_100"
-                    android:text=""
-                    android:clickable="true"
-
+                    android:text="2019年6月7日(金)"
                     android:textColor="@color/colorMainWhite"
-                    android:textSize="@dimen/dp_20" />
+                    android:clickable="true"
+                    android:textSize="@dimen/dp_24" />
 
-                <Button
-                    android:id="@+id/btUpdate"
+                <ImageView
+                    android:id="@+id/ivBackToMain"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignRight="@+id/txTitleDate"
-                    android:layout_alignTop="@id/txTitleDate"
-                    android:layout_alignBottom="@id/txTitleTime"
-                    android:layout_marginTop="@dimen/dp_3"
-                    android:layout_marginBottom="@dimen/dp_2"
-                    android:layout_marginRight="@dimen/dp_6"
-                    android:background="@drawable/style_button_red"
-                    android:gravity="center"
-                    android:text="出勤"
-                    android:textColor="@color/colorMainWhite"
-                    android:textSize="@dimen/dp_18" />
-
-                <TextView
-                    android:id="@+id/txTitleTime"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/txTitleDate"
-                    android:gravity="center"
-                    android:paddingRight="@dimen/dp_100"
-                    android:text=""
+                    android:layout_centerVertical="true"
+                    android:layout_alignLeft="@+id/tvUpdateTitle"
+                    android:layout_marginRight="@dimen/dp_50"
                     android:clickable="true"
+                    app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
 
-                    android:textColor="@color/colorMainWhite"
-                    android:textSize="@dimen/dp_14" />
+                <ImageView
+                    android:id="@+id/ivSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignRight="@+id/tvUpdateTitle"
+                    android:layout_marginRight="@dimen/dp_6"
+                    android:clickable="true"
+                    app:srcCompat="@android:drawable/ic_menu_save" />
 
             </RelativeLayout>
 
@@ -78,16 +68,6 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main" />
-
-    <!--android:onClick="titleONClick"-->
-
-    <!--<android.support.design.widget.FloatingActionButton-->
-        <!--android:id="@+id/fab"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_gravity="bottom|end"-->
-        <!--android:layout_margin="100dp"-->
-        <!--app:srcCompat="@android:drawable/ic_dialog_email" />-->
+    <include layout="@layout/content_update" />
 
 </android.support.design.widget.CoordinatorLayout>
