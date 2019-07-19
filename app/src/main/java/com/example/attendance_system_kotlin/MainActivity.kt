@@ -159,7 +159,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
                 override fun onResponse(call: Call?, response: Response?) {
                 var reponsebody = response!!.body().string()
-                    mainInfoList
+              
                 }
             })
         }
