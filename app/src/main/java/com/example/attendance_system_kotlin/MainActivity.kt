@@ -21,6 +21,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import com.beust.klaxon.Klaxon
 import okhttp3.Call
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -31,12 +32,12 @@ import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-    private lateinit var bundle: Bundle
-//    private var mainInfoList: ArrayList = ArrayList
+    private var bundle: Bundle = Bundle()
+    private var mainInfoList = ArrayList<Maininfo>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        bundle = this.intent.extras
+        bundle.putInt("ggggg", 123)
         title = ""
         setContentView(R.layout.activity_main)
         drawerAction()
@@ -140,6 +141,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         var loginToken: String = bundle.getString("loginToken")
         var userId: String = bundle.getString("userId")
         var getDataUrl: String  = "http://kintai-api.ios.tokyo/user/$userId/attendance/$dataTime";
+        var mainInfoList2 = ArrayList<Maininfo>();
 
         Log.d("looginToken", loginToken)
 
@@ -158,8 +160,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 }
 
                 override fun onResponse(call: Call?, response: Response?) {
-                var reponsebody = response!!.body().string()
-              
+                    var reponsebody = response!!.body().string()
+                    mainInfoList2.clear()
+                    var result = Klaxon().parse<Maininfo>(reponsebody)
+                    Log.d("123", result.toString());
                 }
             })
         }
