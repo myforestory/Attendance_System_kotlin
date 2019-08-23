@@ -39,6 +39,7 @@ class LoginActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         findViews()
+
     }
 
     private fun findViews() {
